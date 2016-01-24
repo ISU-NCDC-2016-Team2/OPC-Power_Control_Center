@@ -10,9 +10,9 @@ tags=['relay1_breaker',
 	'gen2_breaker',
 	'gen2_generation']
 paths = {
-	"substation": "http://10.0.2.2:8000",
-	"relay1": "http://192.168.1.68:8000",
-	"relay2": "http://192.168.1.69:8000",
-	"gen1": "http://192.168.1.70:8000",
-	"gen2": "http://192.168.1.71:8000",
+	#"substation": "http://10.0.2.2:8000",
+	"relay1": "http://10.6.1.2:8000",
+	"relay1": "http://10.6.2.2:8000",
+	"gen1": "http://10.7.1.2:8000",
+	"gen2": "http://10.7.2.2:8000",
 }
