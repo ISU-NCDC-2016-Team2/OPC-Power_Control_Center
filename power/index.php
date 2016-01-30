@@ -37,11 +37,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Power Grid Control Center</a>
+            <a class="active navbar-brand" href="#">Power Grid Control Center</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/grid1.php">Grid1</a></li>
+              <li><a href="/grid1.php">Grid1</a></li>
               <li><a href="/grid2.php">Grid2</a></li>
             </ul>
           </div><!--/.nav-collapse -->
