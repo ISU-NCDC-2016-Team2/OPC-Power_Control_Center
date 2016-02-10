@@ -10,6 +10,8 @@ def print_options((ilist,options)):
 var = sys.argv[1]
 value = sys.argv[2]
 
+print >> sys.stderr, "PUT VALUES: ", sys.argv
+
 relay1=paths['relay1']
 relay2=paths['relay2']
 gen1=paths['gen1']
@@ -28,5 +30,3 @@ if "gen1" in var:
 	xda_gen1.Write([ItemContainer(ItemName=var, Value=value)],LocaleID='en-us')
 if "gen2" in var:
 	xda_gen2.Write([ItemContainer(ItemName=var, Value=value)],LocaleID='en-us')
-
-print "something"

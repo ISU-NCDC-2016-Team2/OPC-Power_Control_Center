@@ -1,5 +1,6 @@
 
-tags=['relay1_breaker',
+tags= [
+	'relay1_breaker',
 	'relay1_flow',
 	'relay1_load',
 	'relay2_breaker',
@@ -8,9 +9,10 @@ tags=['relay1_breaker',
 	'gen1_breaker',
 	'gen1_generation',
 	'gen2_breaker',
-	'gen2_generation']
+	'gen2_generation'
+]
+
 paths = {
-	#"substation": "http://10.0.2.2:8000",
 	"relay1": "http://10.6.1.2:8000",
 	"relay1": "http://10.6.2.2:8000",
 	"gen1": "http://10.7.1.2:8000",

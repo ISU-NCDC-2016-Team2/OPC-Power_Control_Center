@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import sys
 from PyOPC.OPCContainers import *
 from PyOPC.XDAClient import XDAClient
 from config import paths
@@ -11,17 +12,12 @@ relay2=paths['relay2']
 gen1=paths['gen1']
 gen2=paths['gen2']
 
+print >> sys.stderr, "GET VALUES: ", sys.argv
+
 xda_relay1 = XDAClient(OPCServerAddress=relay1,ReturnErrorText=False)
 xda_relay2 = XDAClient(OPCServerAddress=relay2,ReturnErrorText=False)
 xda_gen1 = XDAClient(OPCServerAddress=gen1,ReturnErrorText=False)
 xda_gen2 = XDAClient(OPCServerAddress=gen2,ReturnErrorText=False)
-
-#data = xda.Read([ItemContainer(ItemName='generation'),ItemContainer(ItemName='load'),ItemContainer(ItemName='breaker'),ItemContainer(ItemName='flow')])[0]
-#print data[0].Value
-#print data[1].Value
-#print data[2].Value
-#print data[3].Value
-
 
 print xda_relay1.Read([ItemContainer(ItemName='relay1_breaker')])[0][0].Value
 print xda_relay1.Read([ItemContainer(ItemName='relay1_load')])[0][0].Value
