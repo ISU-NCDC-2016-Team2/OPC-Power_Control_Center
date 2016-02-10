@@ -9,16 +9,16 @@ def print_options((ilist,options)):
 
 var = sys.argv[1]
 value = sys.argv[2]
-    
+
 relay1=paths['relay1']
 relay2=paths['relay2']
 gen1=paths['gen1']
 gen2=paths['gen2']
 
-xda_relay1 = XDAClient(OPCServerAddress=relay1,ReturnErrorText=True)
-xda_relay2 = XDAClient(OPCServerAddress=relay2,ReturnErrorText=True)
-xda_gen1 = XDAClient(OPCServerAddress=gen1,ReturnErrorText=True)
-xda_gen2 = XDAClient(OPCServerAddress=gen2,ReturnErrorText=True)
+xda_relay1 = XDAClient(OPCServerAddress=relay1,ReturnErrorText=False)
+xda_relay2 = XDAClient(OPCServerAddress=relay2,ReturnErrorText=False)
+xda_gen1 = XDAClient(OPCServerAddress=gen1,ReturnErrorText=False)
+xda_gen2 = XDAClient(OPCServerAddress=gen2,ReturnErrorText=False)
 
 if "relay1" in var:
 	xda_relay1.Write([ItemContainer(ItemName=var, Value=value)],LocaleID='en-us')

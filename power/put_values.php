@@ -1,8 +1,8 @@
 <?php
 
-$var = escapeshellarg($_GET['var']);
-$value = escapeshellarg($_GET['value']);
+$var = $_GET['var'];
+$value = $_GET['value'];
 
-exec(escapeshellcmd("python py-bin/opc_put_values.py ".$var." ".$value." 2>&1"), $output, $return_var);
+exec(escapeshellcmd("python py-bin/opc_put_values.py ".$var." ".$value." 2>>../error_log"), $output, $return_var);
 
 ?>

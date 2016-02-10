@@ -1,6 +1,6 @@
 <?php
 
-exec("python py-bin/opc_get_values.py 2>&1", $output, $return_var);
+exec("python py-bin/opc_get_values.py 2>>/tmp/error_log", $output, $return_var);
 
 $data = array();
 
