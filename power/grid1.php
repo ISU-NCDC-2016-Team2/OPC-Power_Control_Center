@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="keywords" content="jQuery Gauge, Gauge, Linear Gauge, Vertical Gauge, Horizontal Gauge" />
-    <title id='Description'>Power System HMI</title>
+    <title id='Description'>Grid 1 - Power System HMI</title>
     <link rel="stylesheet" href="/assets/jqwidgets/styles/jqx.base.css" type="text/css" />
     <script type="text/javascript" src="/assets/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/scripts/demos.js"></script>
@@ -15,7 +15,6 @@
     <script type="text/javascript" src="/assets/jqwidgets/jqxcheckbox.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/jqxradiobutton.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/jqxslider.js"></script>
-    <script type="text/javascript" src="/assets/jqwidgets/jqxbuttons.js"></script>
     <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
     <script src='assets/js/bootstrap.min.js' type='text/javascript'></script>

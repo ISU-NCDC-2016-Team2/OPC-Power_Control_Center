@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="keywords" content="jQuery Gauge, Gauge, Linear Gauge, Vertical Gauge, Horizontal Gauge" />
-    <title id='Description'>Power System HMI</title>
+    <title id='Description'>Grid 2 - Power System HMI</title>
     <link rel="stylesheet" href="/assets/jqwidgets/styles/jqx.base.css" type="text/css" />
     <script type="text/javascript" src="/assets/jqwidgets/scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/scripts/demos.js"></script>
@@ -15,7 +15,6 @@
     <script type="text/javascript" src="/assets/jqwidgets/jqxcheckbox.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/jqxradiobutton.js"></script>
     <script type="text/javascript" src="/assets/jqwidgets/jqxslider.js"></script>
-    <script type="text/javascript" src="/assets/jqwidgets/jqxbuttons.js"></script>
     <link href='assets/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
     <script src='assets/js/bootstrap.min.js' type='text/javascript'></script>
@@ -60,42 +59,42 @@
 
 		$("#breaker").jqxToggleButton({ toggled: true, template: 'success'});
 		$("#breaker2").jqxToggleButton({ toggled: true, template: 'success'});
-		
-		$("#breaker").on('click', function () {                                                                                                                                       
-                var toggled = $("#breaker").jqxToggleButton('toggled');                                                                                                                   
-                if (toggled) {                                                                                                                                                            
-                	$("#breaker").jqxButton({ template: 'success'});                                                                                                                      
+
+		$("#breaker").on('click', function () {
+                var toggled = $("#breaker").jqxToggleButton('toggled');
+                if (toggled) {
+                	$("#breaker").jqxButton({ template: 'success'});
                 	$("#breaker")[0].value = 'Closed';
         		var xmlhttp = new XMLHttpRequest();
         		xmlhttp.open("GET", "put_values.php?var=gen2_breaker&value=1&t="+Math.random(), true);
         		xmlhttp.send();
-			
+
                 }else {
-                        $("#breaker").jqxButton({ template: 'danger'});                                                                                                                       
-                        $("#breaker")[0].value = 'Tripped';                                                                                                                                   
+                        $("#breaker").jqxButton({ template: 'danger'});
+                        $("#breaker")[0].value = 'Tripped';
         		var xmlhttp = new XMLHttpRequest();
         		xmlhttp.open("GET", "put_values.php?var=gen2_breaker&value=0&t="+Math.random(), true);
         		xmlhttp.send();
-                    }                                                                                                                                                                         
+                    }
                 });
-		$("#breaker2").on('click', function () {                                                                                                                                       
-                var toggled = $("#breaker2").jqxToggleButton('toggled');                                                                                                                   
-                if (toggled) {                                                                                                                                                            
-                	$("#breaker2").jqxButton({ template: 'success'});                                                                                                                      
+		$("#breaker2").on('click', function () {
+                var toggled = $("#breaker2").jqxToggleButton('toggled');
+                if (toggled) {
+                	$("#breaker2").jqxButton({ template: 'success'});
                 	$("#breaker2")[0].value = 'Closed';
         		var xmlhttp = new XMLHttpRequest();
         		xmlhttp.open("GET", "put_values.php?var=relay2_breaker&value=1&t="+Math.random(), true);
         		xmlhttp.send();
-			
+
                 }else {
-                        $("#breaker2").jqxButton({ template: 'danger'});                                                                                                                       
-                        $("#breaker2")[0].value = 'Tripped';                                                                                                                                   
+                        $("#breaker2").jqxButton({ template: 'danger'});
+                        $("#breaker2")[0].value = 'Tripped';
         		var xmlhttp = new XMLHttpRequest();
         		xmlhttp.open("GET", "put_values.php?var=relay2_breaker&value=0&t="+Math.random(), true);
         		xmlhttp.send();
-                    }                                                                                                                                                                         
+                    }
                 });
-		$("#update1").jqxButton({});                                                                                 
+		$("#update1").jqxButton({});
                 $("#update1").on('click', function () {
         	var xmlhttp = new XMLHttpRequest();
 		var gen = document.getElementById("generation");
@@ -123,7 +122,7 @@
 	setInterval(function(){update();},1000);
 
 	function update(){
-        
+
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -151,7 +150,7 @@
 		$('#gauge1').jqxLinearGauge({value: Math.round(data.gen2_generation) });
 		$('#gauge2').jqxLinearGauge({value: Math.round(data.relay2_load) });
 		$('#gauge3').jqxLinearGauge({value: Math.round(data.relay2_flow) });
-                
+
             }
         }
         xmlhttp.open("GET", "get_values.php", true);
@@ -169,7 +168,7 @@
     {
         padding: 3px;
         font-family: Verdana;
-        font-size: 12px;        
+        font-size: 12px;
     }
     td{
 	background-color: white;
